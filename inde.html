@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Expresiones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Evaluación de Expresiones Matemáticas</h1>
+    </header>
+    <nav id="menu">
+        <a href="#ejercicio6">Ejercicio 6</a>
+        <a href="#ejercicio7">Ejercicio 7</a>
+        <a href="#ejercicio8">Ejercicio 8</a>
+        <a href="#ejercicio9">Ejercicio 9</a>
+        <a href="#ejercicio10">Ejercicio 10</a>
+    </nav>
+    <section id="ejercicio6">
+        <h2>Ejercicio 6</h2>
+        <p>Define la variable \(z = 4.5\); luego evalúa:</p>
+        <form id="formEjercicio6">
+            <div>
+                <label for="z6">Valor de z:</label>
+                <input type="number" id="z6" value="4.5" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio6a()">Evaluar (a) \(0.4z^2 + 3.1z^2 - 162.3z - 80.7\)</button>
+                <div id="resultado6a" class="result"></div>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio6b()">Evaluar (b) \(\left(\frac{z^3 - 23}{\sqrt[3]{z^2 + 17.5}}\right)\)</button>
+                <div id="resultado6b" class="result"></div>
+            </div>
+        </form>
+    </section>
+
+    <section id="ejercicio7">
+        <h2>Ejercicio 7</h2>
+        <p>Define la variable \(t = 3.2\); luego evalúa:</p>
+        <form id="formEjercicio7">
+            <div>
+                <label for="t7">Valor de t:</label>
+                <input type="number" id="t7" value="3.2" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio7a()">Evaluar (a) \(\frac{1}{2}e^{2t} - 3.8t^3\)</button>
+                <div id="resultado7a" class="result"></div>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio7b()">Evaluar (b) \(\frac{6t^2 + 6t - 2}{t^2 - 1}\)</button>
+                <div id="resultado7b" class="result"></div>
+            </div>
+        </form>
+    </section>
+
+    <section id="ejercicio8">
+        <h2>Ejercicio 8</h2>
+        <p>Define las variables \(x = 6.5\) e \(y = 3.8\); luego evalúa:</p>
+        <form id="formEjercicio8">
+            <div>
+                <label for="x8">Valor de x:</label>
+                <input type="number" id="x8" value="6.5" readonly>
+            </div>
+            <div>
+                <label for="y8">Valor de y:</label>
+                <input type="number" id="y8" value="3.8" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio8a()">Evaluar (a) \((x^2 + y^2)^{2/3} + \frac{xy}{y-x}\)</button>
+                <div id="resultado8a" class="result"></div>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio8b()">Evaluar (b) \(\frac{\sqrt{x+y}}{(x-y)^2} + 2x^2 - xy^2\)</button>
+                <div id="resultado8b" class="result"></div>
+            </div>
+        </form>
+    </section>
+
+    <section id="ejercicio9">
+        <h2>Ejercicio 9</h2>
+        <p>Define las variables \(a, b, c\) y \(d\) con \(c = 4.6\), \(d = 1.7\), \(a = cd^2\), y \(b = \frac{c+a}{c-d}\); luego evalúa:</p>
+        <form id="formEjercicio9">
+            <div>
+                <label for="c9">Valor de c:</label>
+                <input type="number" id="c9" value="4.6" readonly>
+            </div>
+            <div>
+                <label for="d9">Valor de d:</label>
+                <input type="number" id="d9" value="1.7" readonly>
+            </div>
+            <div>
+                <label for="a9">Valor de a:</label>
+                <input type="number" id="a9" readonly>
+            </div>
+            <div>
+                <label for="b9">Valor de b:</label>
+                <input type="number" id="b9" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="calcularAyB()">Calcular a y b</button>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio9a()">Evaluar (a) \(e^{d-b} + \sqrt[3]{c+a} - (ca)^d\)</button>
+                <div id="resultado9a" class="result"></div>
+            </div>
+            <div>
+                <button type="button" onclick="evaluarEjercicio9b()">Evaluar (b) \(\frac{d}{c} + \left(\frac{ct}{b}\right)^2 - c^d - \frac{a}{b}\)</button>
+                <div id="resultado9b" class="result"></div>
+            </div>
+        </form>
+    </section>
+
+    <section id="ejercicio10">
+        <h2>Ejercicio 10</h2>
+        <p>Dos identidades trigonométricas son dadas por:</p>
+        <p>(a) \(\cos^2 x - \sin^2 x = 1 - 2\sin^2 x\)</p>
+        <p>(b) \(\frac{\tan x}{\sin x - 2 \tan x} = \frac{1}{\cos x - 2}\)</p>
+        <p>Para cada parte, verifica que la identidad es correcta calculando los valores del lado izquierdo y derecho de la ecuación, sustituyendo \(x = \pi / 10\).</p>
+        <form id="formEjercicio10">
+            <div>
+                <label for="x10">Valor de x (en radianes):</label>
+                <input type="number" id="x10" value="${Math.PI / 10}" readonly>
+            </div>
+            <div>
+                <h3>Parte (a)</h3>
+                <button type="button" onclick="verificarIdentidad10a()">Verificar (a)</button>
+                <div id="resultado10a_izquierda" class="result">Lado Izquierdo:</div>
+                <div id="resultado10a_derecha" class="result">Lado Derecho:</div>
+            </div>
+            <div>
+                <h3>Parte (b)</h3>
+                <button type="button" onclick="verificarIdentidad10b()">Verificar (b)</button>
+                <div id="resultado10b_izquierda" class="result">Lado Izquierdo:</div>
+                <div id="resultado10b_derecha" class="result">Lado Derecho:</div>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Evaluación de Expresiones</p>
+    </footer>
+
+    <script src="ejercicios.js"></script>
+</body>
+</html>
